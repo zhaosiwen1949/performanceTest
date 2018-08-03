@@ -1,0 +1,26 @@
+{
+  "name": "performence_test",
+  "version": "0.0.1",
+  "description": "Navigate to some web pages and get load performance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaosiwen1949/performanceTest.git"
+  },
+  "keywords": [
+    "performance",
+    "puppeteer"
+  ],
+  "author": "caoys",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhaosiwen1949/performanceTest/issues"
+  },
+  "homepage": "https://github.com/zhaosiwen1949/performanceTest#readme",
+  "dependencies": {
+    "puppeteer": "^1.6.2"
+  }
+}
