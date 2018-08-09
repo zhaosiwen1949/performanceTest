@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/zhaosiwen1949/performanceTest#readme",
   "dependencies": {
+    "pug": "^2.0.3",
     "puppeteer": "^1.6.2"
   }
 }

@@ -1,6 +1,9 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const config = require('config.json');
+const pug = require('pug');
+const resultTemplate = pug.compileFile('./result.pug');
+const config = require('./config.json');
+const { processTiming, processMetrics } = require('./processData');
 (async ()=>{
     const account = config.account;
     const password = config.password;
@@ -39,13 +42,27 @@ const config = require('config.json');
     // });
     await page.waitForSelector($closeDialog);
     console.log("Page loaded");
+
+    // 根据window.performance.timing获取指标
     const performanceTiming = JSON.parse(await page.evaluate(function(){
         return Promise.resolve(JSON.stringify(window.performance.timing));
     }));
-    const 
-    fs.writeFile('./test.json', performanceTiming, (err)=>{
+    const timingResult = processTiming(performanceTiming);
+
+    // 根据 devtools protocol的metrics获取指标
+    const performanceMetrics = await page._client.send('Performance.getMetrics');
+    const metricsResult = processMetrics(performanceMetrics);
+    
+    console.log(timingResult);
+    console.log(metricsResult);
+    const result = resultTemplate({
+        timing: timingResult,
+        metrics: metricsResult,
+    });
+    fs.writeFile('./test.txt', result, (err)=>{
         if(err) throw err;
         console.log("file saved");
     });
-    // await browser.close();
+    
+    await browser.close();
 })()

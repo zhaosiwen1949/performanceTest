@@ -1,0 +1,4 @@
+DOMContentLoaded事件（timing）: 3.26
+Load事件： 9.15
+DOMContentLoaded事件（metrics）: 3.26
+FirstMeaningfulPain事件： 8.50
