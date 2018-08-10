@@ -1,4 +1,52 @@
-DOMContentLoaded事件（timing）: 3.26
-Load事件： 9.15
-DOMContentLoaded事件（metrics）: 3.26
-FirstMeaningfulPain事件： 8.50
+[
+	{
+		"timing": {
+			"DOMContentLoaded": "3.61",
+			"Load": "9.72"
+		},
+		"metrics": {
+			"DOMContentLoaded": "3.61",
+			"FirstMeaningfulPaint": "1.26"
+		}
+	},
+	{
+		"timing": {
+			"DOMContentLoaded": "3.77",
+			"Load": "8.49"
+		},
+		"metrics": {
+			"DOMContentLoaded": "3.77",
+			"FirstMeaningfulPaint": "7.21"
+		}
+	},
+	{
+		"timing": {
+			"DOMContentLoaded": "2.70",
+			"Load": "7.66"
+		},
+		"metrics": {
+			"DOMContentLoaded": "2.69",
+			"FirstMeaningfulPaint": "5.82"
+		}
+	},
+	{
+		"timing": {
+			"DOMContentLoaded": "3.70",
+			"Load": "7.21"
+		},
+		"metrics": {
+			"DOMContentLoaded": "3.70",
+			"FirstMeaningfulPaint": "6.76"
+		}
+	},
+	{
+		"timing": {
+			"DOMContentLoaded": "3.26",
+			"Load": "9.53"
+		},
+		"metrics": {
+			"DOMContentLoaded": "3.26",
+			"FirstMeaningfulPaint": "7.74"
+		}
+	}
+]
